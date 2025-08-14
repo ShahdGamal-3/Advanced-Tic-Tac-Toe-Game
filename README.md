@@ -12,25 +12,58 @@ A feature-rich, modern Tic-Tac-Toe game built with C++, Qt, and SQLite. This pro
 - **Persistent Storage**: All data stored securely in SQLite database.
 - **Testing**: Includes unit and integration tests for core components.
 
-## Project Structure
+
+## Professional Project Hierarchy
 
 ```
-Advanced-Tic-Tac-Toe-Game/
-├── aiAlgorithm.cpp/.h         # AI logic
-├── boardPage.cpp              # Game board UI
-├── databasemanager.cpp/.h     # SQLite database management
-├── game.cpp/.h                # Game logic
-├── mainwindow.cpp/.h/.ui      # Main application window
-├── player.cpp/.h              # Player logic
-├── session.cpp/.h             # User session management
-├── ...                        # Other UI and logic files
-├── aitest/                    # AI unit tests
-├── database_test/             # Database unit tests
-├── gametest/                  # Game logic tests
-├── executableApp/             # Compiled app and dependencies
-├── pictures/                  # Image assets
-├── README.md                  # Project documentation
-├── TIC_TAC_TOE_CPP_QT_SQLITE.pro # Qt project file
+TIC_TAC_TOE_CPP_QT_SQLITE/
+│
+├── src/                        # All main source code
+│   ├── core/                   # Core game logic
+│   │   ├── game.cpp/.h
+│   │   ├── player.cpp/.h
+│   │   ├── aiAlgorithm.cpp/.h
+│   │   └── session.cpp/.h
+│   ├── ui/                     # UI components and pages
+│   │   ├── mainwindow.cpp/.h/.ui
+│   │   ├── boardPage.cpp
+│   │   ├── aiPage.cpp
+│   │   ├── gamesPage.cpp
+│   │   ├── profilePage.cpp
+│   │   ├── signinPage.cpp
+│   │   ├── signupPage.cpp
+│   │   ├── changepasswordPage.cpp
+│   │   ├── changeusernamePage.cpp
+│   │   ├── sessionsPage.cpp
+│   │   └── ...
+│   ├── db/                     # Database management
+│   │   ├── databasemanager.cpp/.h
+│   │   └── database.db
+│   └── resources/              # Qt resources
+│       └── resources.qrc
+│
+├── tests/                      # All test projects
+│   ├── aitest/
+│   ├── database_test/
+│   ├── gametest/
+│   ├── QtTest/
+│   └── QtTest2/
+│
+├── assets/                     # Images and other static files
+│   ├── TicTacToe_Game.png
+│   ├── bg3.png
+│   └── ...
+│
+├── docs/                       # Documentation
+│   ├── SRS.pdf
+│   ├── SDS.pdf
+│   ├── Testing Documentation.pdf
+│   └── README.md
+│
+├── build/                      # Build output (ignored in VCS)
+│
+├── TIC_TAC_TOE_CPP_QT_SQLITE.pro
+└── main.cpp                    # Entry point (can also be in src/ if preferred)
 ```
 
 ## Getting Started
@@ -59,7 +92,7 @@ Advanced-Tic-Tac-Toe-Game/
 
 ## Screenshots
 
-![Main Window](pictures/bg3.png)
+![Main Window](pictures/TicTacToe_Game.png)
 
 ## Documentation
 - **SRS.pdf**: Software Requirements Specification
